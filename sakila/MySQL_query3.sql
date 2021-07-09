@@ -1,0 +1,8 @@
+# 3. 고객ID별 총 대여 수를 출력(대여 수 많은 고객부터)
+
+USE sakila;
+
+SELECT CUSTOMER_ID, COUNT(RENTAL_ID)
+FROM rental
+GROUP BY CUSTOMER_ID
+ORDER BY COUNT(RENTAL_ID) DESC;
